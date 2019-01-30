@@ -30,7 +30,7 @@ function middleware(req, res, next) {
  */
 function easyCors(app) {
     assert.ok(app.all, 'app should have all function')
-    return (req, res, next) => app.all('*', middleware(req, res, next))
+    app.all('*', middleware)
 }
 
 module.exports = {
