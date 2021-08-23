@@ -8,4 +8,17 @@ npm i @f0c1s/easy-cors
 
 ```
 
-License: MIT.
+## Usage
+
+```javascript
+
+import {easyCors} from '@f0c1s/easy-cors';
+// expressApp = express();
+easyCors(expressApp);
+
+```
+
+Check [this service](https://github.com/localserve/node-cpu-service) for implementation example.
+
+
+## License: MIT
