@@ -4,7 +4,7 @@ Setup CORS easily
 
 ```bash
 
-npm i @f0c1s/easy-cors
+npm install @f0c1s/easy-cors
 
 ```
 
