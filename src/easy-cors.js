@@ -3,8 +3,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.easyCors = easyCors;
 const assert_1 = __importDefault(require("assert"));
-function middleware(req, res, next) {
+function easyCors(req, res, next) {
     assert_1.default.strictEqual(typeof next, "function", "next should be a function");
     assert_1.default.ok(res.send, "Response should have a json function");
     assert_1.default.ok(res.header, "Response should have a header function");
@@ -22,12 +23,4 @@ function middleware(req, res, next) {
         next();
     }
 }
-function easyCors(app) {
-    assert_1.default.ok(app.all, "app should have all function");
-    app.all("*", middleware);
-}
-module.exports = {
-    middleware,
-    easyCors,
-};
 //# sourceMappingURL=easy-cors.js.map

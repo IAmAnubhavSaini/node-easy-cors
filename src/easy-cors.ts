@@ -1,8 +1,8 @@
-import { Application, Request, Response } from "express";
+import { Request, Response } from "express";
 
 import assert from "assert";
 
-function middleware(req: Request, res: Response, next: Function) {
+function easyCors(req: Request, res: Response, next: Function) {
     assert.strictEqual(typeof next, "function", "next should be a function");
     assert.ok(res.send, "Response should have a json function");
     assert.ok(res.header, "Response should have a header function");
@@ -26,12 +26,6 @@ function middleware(req: Request, res: Response, next: Function) {
     }
 }
 
-function easyCors(app: Application) {
-    assert.ok(app.all, "app should have all function");
-    app.all("/", middleware);
-}
-
 export {
-    middleware,
-    easyCors,
+    easyCors
 }
