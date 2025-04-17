@@ -31,7 +31,7 @@ function easyCors(app: Application) {
     app.all("*", middleware);
 }
 
-module.exports = {
+export {
     middleware,
     easyCors,
-};
+}
