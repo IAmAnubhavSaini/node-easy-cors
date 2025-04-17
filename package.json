@@ -1,6 +1,6 @@
 {
   "name": "@f0c1s/easy-cors",
-  "version": "2025.04.01",
+  "version": "2025.04.02",
   "description": "Middleware function for CORS problem when you are running multiple localhost servers",
   "main": "src/easy-cors.js",
   "keywords": [

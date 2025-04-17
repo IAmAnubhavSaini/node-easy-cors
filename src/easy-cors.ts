@@ -28,7 +28,7 @@ function middleware(req: Request, res: Response, next: Function) {
 
 function easyCors(app: Application) {
     assert.ok(app.all, "app should have all function");
-    app.all("*", middleware);
+    app.all("/", middleware);
 }
 
 export {
